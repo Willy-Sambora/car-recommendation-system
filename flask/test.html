@@ -1,0 +1,20 @@
+<form method="post">
+    <label for="make">Make:</label><br>
+    <input type="text" id="make" name="make"><br>
+    <label for="model">Model:</label><br>
+    <input type="text" id="model" name="model"><br>
+    <label for="price">Price:</label><br>
+    <input type="number" id="price" name="price"><br>
+    <label for="fuel_efficiency">Fuel Efficiency:</label><br>
+    <input type="number" id="fuel_efficiency" name="fuel_efficiency"><br>
+    <label for="performance">Performance:</label><br>
+    <input type="number" id="performance" name="performance"><br><br>
+    <input type="submit" value="Get Recommendations">
+  </form> 
+  
+  <h3>Recommendations:</h3>
+  <ul>
+    {% for car in recommendations %}
+      <li>{{ car.make }} {{ car.model }}</li>
+    {% endfor %}
+  </ul>
